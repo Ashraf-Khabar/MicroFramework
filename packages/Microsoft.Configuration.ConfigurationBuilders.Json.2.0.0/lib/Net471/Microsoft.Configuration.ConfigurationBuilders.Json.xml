@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Configuration.ConfigurationBuilders.Json</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilderMode">
+            <summary>
+            Possible modes (or paradigms) for parsing a json source file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilderMode.Flat">
+            <summary>
+            The whole file is flattened into a single key/value collection.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilderMode.Sectional">
+            <summary>
+            Use top-level objects to separate into different dictionaries per config section.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder">
+            <summary>
+            A ConfigurationProvider that retrieves values from a json config file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder.JsonFile">
+            <summary>
+            Gets or sets a path to the json file to be read.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder.JsonMode">
+            <summary>
+            Gets or sets the json parsing paradigm to be used by the SimpleJsonConfigBuilder.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder.LazyInitialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the configuration builder lazily.
+            </summary>
+            <param name="name">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing builder-specific attributes specified in the configuration for this provider.</param>
+        </member>
+        <member name="M:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder.GetValue(System.String)">
+            <summary>
+            Looks up a single 'value' for the given 'key.'
+            </summary>
+            <param name="key">The 'key' to look up in the json source. (Prefix handling is not needed here.)</param>
+            <returns>The value corresponding to the given 'key' or null if no value is found.</returns>
+        </member>
+        <member name="M:Microsoft.Configuration.ConfigurationBuilders.SimpleJsonConfigBuilder.GetAllValues(System.String)">
+            <summary>
+            Retrieves all known key/value pairs from the json source where the key begins with with <paramref name="prefix"/>.
+            </summary>
+            <param name="prefix">A prefix string to filter the list of potential keys retrieved from the source.</param>
+            <returns>A collection of key/value pairs.</returns>
+        </member>
+    </members>
+</doc>
