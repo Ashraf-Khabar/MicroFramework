@@ -21,7 +21,7 @@ Usage
 
     csharpCopy code
 
-    ```
+    ```c#
     class MyModel : Model
     {
         public string Name { get; set; }
