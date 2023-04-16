@@ -21,30 +21,36 @@ Usage
 
     csharpCopy code
 
-    `class MyModel : Model
+    ```
+    class MyModel : Model
     {
         public string Name { get; set; }
         public int Age { get; set; }
-    }`
+    }
+    ```
 
 3.  Create an XML environment document to configure your database connection information. The document should follow the provided schema, which includes elements for specifying the database type, connection string, and other settings.
 
     xmlCopy code
 
-    `<?xml version="1.0" encoding="utf-8"?>
+    ````xml
+    <?xml version="1.0" encoding="utf-8"?>
     <ConnectionSettings>
         <DatabaseType>SqlServer</DatabaseType>
         <ConnectionString>Data Source=.;Initial Catalog=myDatabase;Integrated Security=True</ConnectionString>
-    </ConnectionSettings>`
+    </ConnectionSettings>
+    ```
 
 4.  Initialize the Connection class with the path to your XML environment document and use it to establish and manage database connections.
 
     csharpCopy code
 
-    `var connection = new Connection("path/to/environment.xml");
+    ```
+    var connection = new Connection("path/to/environment.xml");
     connection.Open();
     // Perform database operations using the connection object
-    connection.Close();`
+    connection.Close();
+    ```
 
 Contributing
 ------------
