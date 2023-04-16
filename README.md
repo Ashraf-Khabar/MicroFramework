@@ -45,7 +45,7 @@ Usage
 
     csharpCopy code
 
-    ```
+    ```c#
     var connection = new Connection("path/to/environment.xml");
     connection.Open();
     // Perform database operations using the connection object
